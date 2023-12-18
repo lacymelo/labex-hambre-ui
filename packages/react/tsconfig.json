@@ -1,0 +1,6 @@
+{
+    "extends": "@labex-hambre-ui/ts-config/react.json",
+    "include": [
+        "src"
+    ],
+}

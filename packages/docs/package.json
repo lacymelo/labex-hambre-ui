@@ -1,0 +1,39 @@
+{
+  "name": "@labex-hambre-ui/docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build",
+    "docs": "storybook dev --docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.5",
+    "@storybook/addon-interactions": "^7.6.5",
+    "@storybook/addon-links": "^7.6.5",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/blocks": "^7.6.5",
+    "@storybook/react": "^7.6.5",
+    "@storybook/react-webpack5": "^7.6.5",
+    "@storybook/test": "^7.6.5",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.6.5"
+  },
+  "dependencies": {
+    "@labex-hambre-ui/eslint-config": "*",
+    "@labex-hambre-ui/react": "*",
+    "@labex-hambre-ui/tokens": "*",
+    "@labex-hambre-ui/ts-config": "*",
+    "@storybook/addon-a11y": "^7.6.5",
+    "@storybook/addon-docs": "^7.6.5",
+    "phosphor-react": "^1.4.1",
+    "polished": "^4.2.2"
+  }
+}

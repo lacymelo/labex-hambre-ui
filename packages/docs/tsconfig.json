@@ -1,0 +1,9 @@
+{
+  "extends": "@labex-hambre-ui/ts-config/base.json",
+  "compilerOptions": {
+    "jsx": "react"
+  },
+  "include": [
+    "src"
+  ]
+}
