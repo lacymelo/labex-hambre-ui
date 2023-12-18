@@ -6,7 +6,9 @@ import { Lock, MagnifyingGlass } from 'phosphor-react'
 export default {
     title: 'Form/Text Input',
     component: TextInput,
+    tags: ['autodocs'],
     args: {
+        name: 'email'
     },
     decorators: [
         (Story) => {

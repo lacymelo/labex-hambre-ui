@@ -5,6 +5,7 @@ import { Meta, StoryObj } from "@storybook/react";
 export default {
     title: 'Form/ Text Area',
     component: TextArea,
+    tags: ['autodocs'],
     args: {
     },
     decorators: [
@@ -29,6 +30,7 @@ export default {
 
 export const Primary: StoryObj<TextAreaProps> = {
     args: {
+        name: 'observation',
         placeholder: 'add any observations...',
         typeof: 'text'
     }

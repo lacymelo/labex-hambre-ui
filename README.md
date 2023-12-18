@@ -28,7 +28,6 @@
 - [X] Text
 - [X] TextArea
 - [X] TextInput
-- [X] Toast
 - [X] Transition
 
 > Se você quiser somente utilizar o design system, instale utilizando o comando seguinte.
@@ -37,7 +36,7 @@
 npm i @labex-hambre-ui/react@latest
 ```
 
-## :rocket: Se você quiser criar o seu próprio um design system.
+## :rocket: Se você quiser criar o seu próprio design system.
 > Siga esse conjunto de configurações
 
 ## 🔖 Configurações do Pacote de Tokens
@@ -611,9 +610,6 @@ npm i @radix-ui/react-radio-group
 
 # 🛠️ instale a lib react-switch do radix em packages/react
 npm i @radix-ui/react-switch
-
-# 🛠️ instale a lib react-toast do radix em packages/react
-npm i @radix-ui/react-toast
 
 # 🛠️ instale a lib de acessibilidade addon-a11y do storybook em packages/docs
 npm i @storybook/addon-a11y

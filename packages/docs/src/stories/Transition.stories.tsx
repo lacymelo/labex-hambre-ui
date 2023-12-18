@@ -5,6 +5,7 @@ import { Meta, StoryObj } from "@storybook/react";
 export default {
     title: 'Effect/Transition',
     component: Transition,
+    tags: ['autodocs'],
     args: {
         currentWidth: '50%',
         currentHeight: '100%',

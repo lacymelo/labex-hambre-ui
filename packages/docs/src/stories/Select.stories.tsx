@@ -5,6 +5,7 @@ import { Meta, StoryObj } from "@storybook/react"
 export default {
     title: 'Form/Select',
     component: Select,
+    tags: ['autodocs'],
     args: {
         placeholder: 'Selecione ..',
         items: [
@@ -40,6 +41,6 @@ export default {
 
 export const Primary: StoryObj<SelectProps> = {
     args: {
-
+        name: 'country'
     }
 }

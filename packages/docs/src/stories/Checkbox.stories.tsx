@@ -5,6 +5,7 @@ import { Box, Text, Checkbox, CheckboxProps } from '@labex-hambre-ui/react'
 export default {
     title: 'Form/Checkbox',
     component: Checkbox,
+    tags: ['autodocs'],
     args: {},
     decorators: [
         (Story) => {
@@ -21,4 +22,17 @@ export default {
     ],
 } as Meta<CheckboxProps>
 
-export const Primary: StoryObj<CheckboxProps> = {}
+export const Primary: StoryObj<CheckboxProps> = {
+    args: {
+        name: 'term',
+        typeof: 'checkbox',
+        checked: true
+    },
+}
+
+export const secondary: StoryObj<CheckboxProps> = {
+    args: {
+        name: 'term',
+        typeof: 'checkbox'
+    },
+}

@@ -6,6 +6,7 @@ import { Check, Fire, Lightbulb, WarningCircle } from "phosphor-react";
 export default {
     title: 'Message/Message Icon',
     component: MessageIcon,
+    tags: ['autodocs'],
     args: {
 
     },

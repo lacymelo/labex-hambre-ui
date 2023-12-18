@@ -4,6 +4,7 @@ import { Meta, StoryObj } from "@storybook/react";
 export default {
     title: 'Effect/Loading',
     component: Loading,
+    tags: ['autodocs'],
     args: {
 
     },

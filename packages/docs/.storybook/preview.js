@@ -2,9 +2,6 @@ import {
   themes
 } from '@storybook/theming'
 
-/** @type { import('@storybook/react').Preview } */
-import '@storybook/addon-docs/blocks';
-
 const preview = {
   parameters: {
     actions: {

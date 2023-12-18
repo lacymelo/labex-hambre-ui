@@ -5,14 +5,16 @@ import { Meta, StoryObj } from "@storybook/react";
 export default {
     title: 'Form/Switch',
     component: Switch,
+    tags: ['autodocs'],
     args: {
-
+        typeof: 'checkbox',
+        name: 'accept',
     },
     argTypes: {
-        disabled: {
+        checked: {
             control: {
                 type: 'boolean'
-            },
+            }
         },
     },
     decorators: [
@@ -40,10 +42,11 @@ export default {
     ]
 } as Meta<SwitchProps>
 
-export const Primary: StoryObj<SwitchProps> = {}
+export const Primary: StoryObj<SwitchProps> = {
+}
 
 export const Disabled: StoryObj<SwitchProps> = {
     args: {
-        disabled: true
+        checked: true
     }
 }

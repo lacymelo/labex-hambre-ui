@@ -5,6 +5,7 @@ import { Meta, StoryObj } from '@storybook/react'
 export default {
     title: 'Form/Multi Step',
     component: MultiStep,
+    tags: ['autodocs'],
     args: {
         currentStep: 1,
         size: 4,
