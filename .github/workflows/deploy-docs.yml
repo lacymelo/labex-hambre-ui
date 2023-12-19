@@ -1,29 +1,26 @@
 name: Deploy docs
 
-on: 
+on:
   push:
     branches:
       - main
 
-jobs: 
+jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-        # setup do node
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm',
+          cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
 
-        # para instalar somente as dependências de produção
       - run: npm ci
 
-        # executa a build que foi configurada no turbo 
       - run: npm run build
 
       - name: Deploy storybook
