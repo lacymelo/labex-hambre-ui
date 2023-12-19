@@ -16,7 +16,7 @@ jobs:
 
         # setup do node
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: 'npm'
@@ -27,7 +27,6 @@ jobs:
 
         # executa a build que foi configurada no turbo
       - run: npm run build
-      
         # env: 
         #   TURBO_TOKEN: ${{secrets.VERCEL_TOKEN}}
         #   TURBO_TEAM: lacymelo
@@ -36,6 +35,4 @@ jobs:
         working-directory: ./packages/docs
         run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
         env:
-          GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          REPO_URL: git@github.com:lacymelo/labex-hambre-ui.git
-          # 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
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
