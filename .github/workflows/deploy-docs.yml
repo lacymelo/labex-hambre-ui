@@ -25,9 +25,6 @@ jobs:
 
         # executa a build que foi configurada no turbo 
       - run: npm run build
-        # env: 
-        #   TURBO_TOKEN: ${{secrets.VERCEL_TOKEN}}
-        #   TURBO_TEAM: lacymelo
 
       - name: Deploy storybook
         working-directory: ./packages/docs
