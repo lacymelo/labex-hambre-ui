@@ -309,7 +309,7 @@ export const {
 })
 
 ```
-## 🔖 Configurações Docs
+## 🔖 Configurações Docs do Storybook
 
 ```bash
 # Dentro do diretório packages crie, um diretório docs
@@ -622,9 +622,62 @@ npm i @storybook/addon-docs
 ## 🔖 Publicação e Manutenção
 
  ```bash
-# 🛠️ Biblioteca para faze o deploy em packages/docs
+# 🛠️ Instale a lib storybook-deployer no diretório packages/docs, para fazer o deploy do designer system
+npm i @storybook/storybook-deployer --save-dev
+
+# no diretório docs, acesse o package.json e adicione em script esta configuração.
+  "scripts": {
+    "deploy-storybook": "storybook-to-ghpages",
+  },
+
+# Obs: é importante que o projeto esteja no github
+
+# Na raiz do projeto, crie os diretórios .github/workflows
+.github/workflows
+
+# Crie o arquivo deploy-docs.yml
+.github/workflows/deploy-docs.yml
+
+# No arquivo escreva as seguintes configurações, e esteja atento as versões dos serviços utilizados.
+name: Deploy docs
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs: 
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+        # setup do node
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm',
+          cache-dependency-path: '**/package-lock.json'
+
+        # para instalar somente as dependências de produção
+      - run: npm ci
+
+        # executa a build que foi configurada no turbo 
+      - run: npm run build
+        # env: 
+        #   TURBO_TOKEN: ${{secrets.VERCEL_TOKEN}}
+        #   TURBO_TEAM: lacymelo
+
+      - name: Deploy storybook
+        working-directory: ./packages/docs
+        run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
+        env:
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
+
+# agora faça o commit do código no github
 ```
- - [X] npm i @storybook/storybook-deployer --save-dev
 
  ```bash
 # 🛠️ Biblioteca para gerenciar o versionamentos dos pacotes

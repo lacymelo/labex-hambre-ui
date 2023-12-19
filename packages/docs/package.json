@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "storybook dev -p 6006",
-    "build": "storybook build",
-    "docs": "storybook dev --docs"
+    "deploy-storybook": "storybook-to-ghpages",
+    "build": "storybook build"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +21,7 @@
     "@storybook/blocks": "^7.6.5",
     "@storybook/react": "^7.6.5",
     "@storybook/react-webpack5": "^7.6.5",
+    "@storybook/storybook-deployer": "^2.8.16",
     "@storybook/test": "^7.6.5",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
