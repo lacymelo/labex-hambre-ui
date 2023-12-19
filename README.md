@@ -626,9 +626,9 @@ npm i @storybook/addon-docs
 npm i @storybook/storybook-deployer --save-dev
 
 # no diretório docs, acesse o package.json e adicione em script esta configuração.
-  "scripts": {
-    "deploy-storybook": "storybook-to-ghpages",
-  },
+"scripts": {
+  "deploy-storybook": "storybook-to-ghpages",
+},
 
 # Obs: é importante que o projeto esteja no github
 
@@ -676,8 +676,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
 
-# agora faça o commit do código no github
+# No seu github, entre em
+settings/actions/general
 
+# Encontre o tópico Workflow permissions, e marque essa permissão
+Read and write permissions
+
+# salve e faça o push do seu projeto
 
 ```
 

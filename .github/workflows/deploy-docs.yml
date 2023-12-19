@@ -1,31 +1,29 @@
 name: Deploy docs
 
-# executa o deploy sempre que houver um push na branch main
-on:
+on: 
   push:
     branches:
       - main
 
-jobs:
+jobs: 
   build-and-deploy:
     runs-on: ubuntu-latest
-    # passos
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
         # setup do node
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
-          cache: 'npm'
+          node-version: 20
+          cache: 'npm',
           cache-dependency-path: '**/package-lock.json'
 
-        # para instalar somente a s dependências de produção
+        # para instalar somente as dependências de produção
       - run: npm ci
 
-        # executa a build que foi configurada no turbo
+        # executa a build que foi configurada no turbo 
       - run: npm run build
         # env: 
         #   TURBO_TOKEN: ${{secrets.VERCEL_TOKEN}}
