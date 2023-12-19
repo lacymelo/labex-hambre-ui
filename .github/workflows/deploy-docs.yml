@@ -37,4 +37,5 @@ jobs:
         run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
         env:
           GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          REPO_URL: git@github.com:lacymelo/labex-hambre-ui.git
           # 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
