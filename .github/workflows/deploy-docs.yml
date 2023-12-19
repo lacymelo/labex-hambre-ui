@@ -12,16 +12,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node.js # setup do node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
 
-      - run: npm ci
+      - run: npm ci # para instalar somente a s dependências de produção
 
-      - run: npm run build
+      - run: npm run build # executa a build que foi configurada no turbo
 
       - name: Deploy storybook
         working-directory: ./packages/docs

@@ -641,40 +641,35 @@ npm i @storybook/storybook-deployer --save-dev
 # No arquivo escreva as seguintes configurações, e esteja atento as versões dos serviços utilizados.
 name: Deploy docs
 
-on: 
+on:
   push:
     branches:
       - main
 
-jobs: 
+jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-        # setup do node
-      - name: Setup Node.js
+      - name: Setup Node.js # setup do node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm',
+          cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
 
-        # para instalar somente as dependências de produção
-      - run: npm ci
+      - run: npm ci # para instalar somente a s dependências de produção
 
-        # executa a build que foi configurada no turbo 
-      - run: npm run build
-        # env: 
-        #   TURBO_TOKEN: ${{secrets.VERCEL_TOKEN}}
-        #   TURBO_TEAM: lacymelo
+      - run: npm run build # executa a build que foi configurada no turbo
 
       - name: Deploy storybook
         working-directory: ./packages/docs
         run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
         env:
           GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
+
 
 # No seu github, entre em
 settings/actions/general
@@ -683,6 +678,12 @@ settings/actions/general
 Read and write permissions
 
 # salve e faça o push do seu projeto
+
+# se tudo deu certo, no repositório do projeto, entre neste caminho
+settings/pages/
+
+# Em GitHUb Pages altere branch selecione a branch gh-pages e salve
+gh-pages
 
 ```
 
