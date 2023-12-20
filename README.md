@@ -728,7 +728,7 @@ npm run version-packages
 npm run release
 ``` 
 
-## 🔖 Turbo repo com a Vercel
+## 🔖 Vercel Token
 
  ```bash
 # 🛠️ Para acelerar o processo de deploy no git hub vamos usar o CI/CD da vercel, para isso é necessário criar um access token da vercel, para isso entre na sua conta da vercel, e siga os seguintes passos.
@@ -747,21 +747,105 @@ Settings/Secrets and variables/actions
 # cria uma chave secreta, onde o nome será.
 VERCEL_TOKEN
 
-# no campo onde está Secret, cole a chave que você criou
+# no campo onde está Secret, cole a chave que você criou e salve
+
+# Agora NPM crie o token de acesso
+packages/Access Tokens
+
+# Clique no botão
+Generate New Token
+
+# estando na aba Tokens crie o token de acesso, crie o nome conforme o seu projeto, para este projeto o nome será.
+Labex Hambre UI CI/CD
+
+# selecione a opção 
+Automation
+
+# Agora clique em gerar token, copie o token gerado.
+
+# Agora entre no seu repositório no github, seguindo este fluxo.
+Settings/Secrets and variables/actions
+
+# cria uma chave secreta, onde o nome será.
+NPM_TOKEN
+
+# no campo onde está Secret, cole a chave que você criou e salve
 
 # no workflow arquivo deploy-docs.yml do seu projeto adicione essas configurações, seguido do comando.
 - run: npm run build
   env: 
-    TURBO_TOKEN: ${{secrets.VERCEL_TURBO_TOKEN}}
+    TURBO_TOKEN: ${{secrets.VERCEL_TOKEN}}
     TURBO_TEAM: lacymelo
 
 # agora faça o push do projeto no github
 
-
-
-## :man_student: Autores
 ```
+## 🔖 Publicação automatizada com o TURBOREPO
 
+```bash
+# A criação do arquivo de release deixa automatizado o processo de deploy no npm, assim quando for realizado o deploy no github ao mesmo tempo ocorre a publicação no npm.
+
+# 🛠️ Crie um workflow release.yml
+.github/workflows/release.yml
+
+# adicione no arquivo release.yml as seguintes informações.
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+        # setup do node
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
+
+        # para instalar somente a s dependências de produção
+      - run: npm ci
+
+        # executa a build que foi configurada no turbo
+      - run: npm run build
+
+      - name: Publish to NPM
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          # This expects you to have a script called release which does a build for your packages and calls changeset publish
+          publish: npm run release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          TURBO_TEAM: lacymelo
+```
+## 🔖 Execução do projeto quando houver atualização
+
+```bash
+# 🛠️ Quando houver alterações no repositório, você pode mapear usando o seguinte comando
+npm run changeset
+
+# agora para realizar o controle versão execute o seguinte comando
+npm run version-packages
+
+# Agora não precisa executar o comando `npm run release`, porque o workflow release.yml é o responsável por publicar no npm.
+
+# então apenas faça o push da atualização
+```
+# :man_student: Autores
 ---
 
 Feito com ♥ by Laciene Melo :wave: [#lacymelo](https://github.com/lacymelo)
