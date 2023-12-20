@@ -4,8 +4,6 @@
   </h1>
 
   > Bem-vindo ao repositório de código-fonte do Design System do Hambre Delivery, neste projeto estão documentados os componentes React e ferramentas que ajudaram desde a implementação do Design System até a publicação, como Storybook, changesets e muito mais.
-
-  <img src="./packages/assets/logo-hambre-readme.png" width="40%" />
 </div>
 
 ---
@@ -619,7 +617,7 @@ npm i @storybook/addon-docs
 
 
 ```
-## 🔖 Publicação e Manutenção
+## 🔖 Publicação do Storybook no GitHub
 
  ```bash
 # 🛠️ Instale a lib storybook-deployer no diretório packages/docs, para fazer o deploy do designer system
@@ -685,34 +683,84 @@ settings/pages/
 # Em GitHUb Pages altere branch selecione a branch gh-pages e salve
 gh-pages
 
+# faça o push da aplicação novamente, se tudo deu certo, no actions do projeto, vai haver um grafo
+# com um nó raiz build, seguidos de dois nós filhos, o segundo nó filho é o deploy do docs, com o link de acesso online do storybook.
+
 ```
+## 🔖 Controle de Versão e Publicação no NPM
 
  ```bash
-# 🛠️ Biblioteca para gerenciar o versionamentos dos pacotes
-```
- - [X] npm i @changesets/cli -D
+# 🛠️ Para controle de versão instale a lib changesets, na raiz do projeto
+npm i @changesets/cli -D
+
+# 🛠️ Depois de instalar, execute o changesets
+npx changeset init
+
+# acesse o arquivo config.json
+.changeset/config.json
+
+# altere no arquivo essas configurações
+{
+  "access": "public",
+  "ignore": ["@labex-hambre-ui/docs"]
+}
+
+# no package.json na raiz do projeto, adicione esse scripts
+"scripts": {
+  "changeset": "changeset",
+  "version-packages": "changeset version",
+    "release": "turbo run build --filter=!docs && changeset publish"
+}
+
+# Se não tiver um conta no npm, crie uma conta, caso tenha faça login executado no terminal
+npm login
+
+# entre no painel online do npm e crie uma organização, no caso deste projeto o nome é
+labex-hambre-ui
+
+# 🛠️ Quando houver alterações no repositório, você pode mapear usando o seguinte comando
+npm run changeset
+
+# agora para realizar o controle versão execute o seguinte comando
+npm run version-packages
+
+# depois de mapear as versões, basta publicar os pacotes no npm usando o comando
+npm run release
+``` 
+
+## 🔖 Turbo repo com a Vercel
 
  ```bash
-# 🛠️ Comando para inicializar o changesets
-```
- - [X] npx changeset init
+# 🛠️ Para acelerar o processo de deploy no git hub vamos usar o CI/CD da vercel, para isso é necessário criar um access token da vercel, para isso entre na sua conta da vercel, e siga os seguintes passos.
+Settings/Tokens/
 
- ```bash
-# 🛠️ Executar esse comando para validar no npm, qualquer atualização no repositório
-```
- - [X] npm run changeset
+# estando na aba Tokens crie o token de acesso, crie o nome conforme o seu projeto, para este projeto o nome será.
+Labex Hambre UI CI/CD
 
- ```bash
-# 🛠️ Executar o comando para mudar a versão no caso de uma alteração
-```
- - [X] npm run version-packages
+# selecione o SCOPE, e a data de expiração, selecione que o token não expira, clique no botão create.
 
- ```bash
-# 🛠️ Executar o comando para fazer o deploy no npm
-```
- - [X] npm run release
+# o token é exibido na tela, após isso basta copiar, ele não será exibido novamente então não perca.
+
+# Agora entre no seu repositório no github, seguindo este fluxo.
+Settings/Secrets and variables/actions
+
+# cria uma chave secreta, onde o nome será.
+VERCEL_TOKEN
+
+# no campo onde está Secret, cole a chave que você criou
+
+# no workflow arquivo deploy-docs.yml do seu projeto adicione essas configurações, seguido do comando.
+- run: npm run build
+  env: 
+    TURBO_TOKEN: ${{secrets.VERCEL_TURBO_TOKEN}}
+    TURBO_TEAM: lacymelo
+
+# agora faça o push do projeto no github
+
+
 
 ## :man_student: Autores
+```
 
 ---
 
