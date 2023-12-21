@@ -1,5 +1,11 @@
 # @labex-hambre-ui/react
 
+## 2.3.0
+
+### Minor Changes
+
+- export index
+
 ## 2.2.0
 
 ### Minor Changes

@@ -13,3 +13,5 @@ export * from './components/MessageIcon'
 export * from './components/Radio'
 export * from './components/Switch'
 export * from './components/Transition'
+
+export * from './styles'
