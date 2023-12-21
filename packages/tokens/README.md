@@ -19,7 +19,7 @@ npm install @labex-hambre-ui/tokens
 ```
 
 ## :eyes: Visite o Storybook da Biblioteca
-👉 [Storybook](lacymelo.github.io/labex-hambre-ui/?path=/docs/home--documentation)
+👉 [Storybook](http://lacymelo.github.io/labex-hambre-ui/?path=/docs/home--documentation)
 
 # :closed_book: License
 

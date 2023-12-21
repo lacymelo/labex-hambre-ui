@@ -1,5 +1,11 @@
 # @labex-hambre-ui/tokens
 
+## 2.3.0
+
+### Minor Changes
+
+- link storybook and readme
+
 ## 2.2.0
 
 ### Minor Changes

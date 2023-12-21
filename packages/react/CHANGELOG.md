@@ -1,5 +1,11 @@
 # @labex-hambre-ui/react
 
+## 2.2.0
+
+### Minor Changes
+
+- link storybook and readme
+
 ## 2.1.0
 
 ### Minor Changes
