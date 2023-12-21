@@ -28,11 +28,6 @@
 - [X] TextInput
 - [X] Transition
 
-<!-- ## :rocket: Compatibilidade
-```bash
-npm i @labex-hambre-ui/react@latest
-``` -->
-
 ## :rocket: Compatibilidade
 > A biblioteca @labex-hambre-ui/react é compatível com as seguintes versões de dependências:
 

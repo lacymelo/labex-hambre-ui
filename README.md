@@ -33,8 +33,20 @@
 npm i @labex-hambre-ui/react@latest
 ```
 
-# :man_student: Autores
----
+##  📥 Instalação
+> Para instalar o @labex-hambre-ui/react, utilize o seguinte comando npm:
+```bash
+npm i @labex-hambre-ui/react@latest
+```
 
-Feito com ♥ by Laciene Melo :wave: [#lacymelo](https://github.com/lacymelo)
+## :eyes: Visite o Storybook da Biblioteca
+👉 [Storybook](http://lacymelo.github.io/labex-hambre-ui/?path=/docs/home--documentation)
+
+# :closed_book: License
+
+Released in 2023 :closed_book: License
+Made with love by  Laciene Melo [#lacymelo](https://github.com/lacymelo) 🚀.
+This project is under the [MIT license](./LICENSE).
+Give a ⭐️ if this project helped you!
+
 
