@@ -1,5 +1,11 @@
 # @labex-hambre-ui/react
 
+## 2.5.0
+
+### Minor Changes
+
+- add use client in the index.tsx
+
 ## 2.4.0
 
 ### Minor Changes
