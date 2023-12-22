@@ -24,7 +24,6 @@ npm install @labex-hambre-ui/tokens
 # :closed_book: License
 
 Released in 2023 :closed_book: License
-Made with love by  Laciene Melo [#lacymelo](https://github.com/lacymelo) 🚀.
+Made with ♥ by  :man_student: Laciene Melo :wave: [#lacymelo](https://github.com/lacymelo) 🚀.
 This project is under the [MIT license](./LICENSE).
 Give a ⭐️ if this project helped you!
-

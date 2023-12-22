@@ -842,7 +842,10 @@ npm run changeset
 npm run version-packages
 ```
 ✨ Agora não precisa executar o comando `npm run release`, porque o workflow release.yml é o responsável por publicar no npm, então apenas faça o push da atualização.
-# :man_student: Autores
----
 
-Feito com ♥ by Laciene Melo :wave: [#lacymelo](https://github.com/lacymelo)
+# :closed_book: License
+
+Released in 2023 :closed_book: License
+Made with ♥ by  :man_student: Laciene Melo :wave: [#lacymelo](https://github.com/lacymelo) 🚀.
+This project is under the [MIT license](./LICENSE).
+Give a ⭐️ if this project helped you!
