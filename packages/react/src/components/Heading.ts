@@ -1,3 +1,4 @@
+'use client'
 import { styled } from "@stitches/react"
 import { ComponentProps, ElementType } from "react"
 
