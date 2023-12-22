@@ -1,5 +1,11 @@
 # @labex-hambre-ui/react
 
+## 2.6.0
+
+### Minor Changes
+
+- use client in the styles/index.ts
+
 ## 2.5.0
 
 ### Minor Changes
