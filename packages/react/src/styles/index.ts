@@ -1,4 +1,3 @@
-'use client'
 import { colors, fontSizes, fontWeights, fonts, lineHeights, radii, space } from '@labex-hambre-ui/tokens'
 import { createStitches, defaultThemeMap } from '@stitches/react'
 
