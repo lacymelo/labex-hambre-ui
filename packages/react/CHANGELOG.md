@@ -1,5 +1,11 @@
 # @labex-hambre-ui/react
 
+## 2.8.0
+
+### Minor Changes
+
+- documentation about packages
+
 ## 2.7.0
 
 ### Minor Changes

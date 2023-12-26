@@ -28,10 +28,36 @@
 - [X] TextInput
 - [X] Transition
 
-##  📥 Instalação
+##  📥 Instalações e configurações 
 > Para instalar o @labex-hambre-ui/react, utilize o seguinte comando npm:
 ```bash
 npm i @labex-hambre-ui/react@latest
+```
+🛠️ Para ativar o Intellisense da biblioteca na criação de um styled component, entre em `tsconfig.json` e altere o moduleResolution para 'Node', dessa forma.
+```bash
+"moduleResolution": "Node",
+```
+
+🛠️ o arquivo `styles.js` que você criar, seja para uma página o componente, deve ter a configuração `use client` antes de tudo, pois os estilos devem ser renderizados no lado do cliente, como neste exemplo a seguir.
+```bash
+'use client'
+import { Text, styled } from "@labex-hambre-ui/react";
+
+export const LinkRedirect = styled('div', {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: '$2',
+    cursor: 'pointer',
+    color: '$hambre600',
+    fontSize: '$sm',
+    textDecoration: 'none',
+
+    '&:hover': {
+        color: '$hambre300',
+        transition: 'all ease .36s'
+    },
+})
 ```
 
 ## :eyes: Visite o Storybook da Biblioteca
