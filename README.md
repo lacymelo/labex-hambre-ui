@@ -1,10 +1,15 @@
 <div align="center">
   <h1>
-    🤖 Design System Hambre
+    🤖 @labex-hambre-ui/react
   </h1>
 
-  > Bem-vindo ao repositório de código-fonte do Design System do Hambre Delivery, neste projeto estão documentados os componentes React e ferramentas que ajudaram desde a implementação do Design System até a publicação, como Storybook, changesets e muito mais.
+  > Esta biblioteca fornece um conjunto de componentes React para a construção de interfaces de usuário, sendo compatível com as versões mais recentes do NextJS 13 e 14 🚀, seguindo as diretrizes dos três pilares.
 </div>
+
+## :rocket: Abordagem dos três pilares
+- [X] Server Components 👉  Para não usar Javascript no lado do cliente.
+- [X] Client Components 👉  Enviando somente o javascript necessário para o navegador (cliente).
+- [X] Streaming SSR 👉  Ler/escrever dados de forma parcial + Server-Side Rendering
 
 ---
 
@@ -27,6 +32,14 @@
 - [X] TextArea
 - [X] TextInput
 - [X] Transition
+
+## :rocket: Compatibilidade
+> A biblioteca @labex-hambre-ui/react é compatível com as seguintes versões de dependências:
+
+- [X] NextJS 12
+- [X] NextJS 13
+- [X] NextJS 14
+- [X] @radix-ui
 
 ##  📥 Instalações e configurações 
 > Para instalar o @labex-hambre-ui/react, utilize o seguinte comando npm:

@@ -9,7 +9,12 @@
 ---
 
 ## :rocket: Compatibilidade
-> A biblioteca @labex-hambre-ui/tokens é independente e pode ser utilizada com diversas versões de outras bibliotecas. Não possui dependências específicas além das dependências de desenvolvimento listadas no arquivo package.json.
+> A biblioteca @labex-hambre-ui/react é compatível com as seguintes versões de dependências:
+
+- [X] NextJS 12
+- [X] NextJS 13
+- [X] NextJS 14
+- [X] @radix-ui
 
 ##  📥 Instalação
 > Para instalar o @labex-hambre-ui/tokens, utilize o seguinte comando npm:

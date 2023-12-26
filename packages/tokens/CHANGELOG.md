@@ -1,5 +1,11 @@
 # @labex-hambre-ui/tokens
 
+## 2.4.0
+
+### Minor Changes
+
+- adjust in the documentation
+
 ## 2.3.0
 
 ### Minor Changes

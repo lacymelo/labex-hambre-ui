@@ -3,9 +3,13 @@
     🤖 @labex-hambre-ui/react
   </h1>
 
-  > Esta biblioteca fornece um conjunto de componentes React para a construção de interfaces de usuário com o sistema de design Labex Hambre. Inclui componentes como diálogos, avatares, caixas de seleção, grupos de rádio, seleções, switches, entre outros. A biblioteca foi projetada para funcionar perfeitamente com os tokens Labex Hambre e segue as diretrizes estabelecidas no sistema de design Labex Hambre.
+  > Esta biblioteca fornece um conjunto de componentes React para a construção de interfaces de usuário, sendo compatível com as versões mais recentes do NextJS 13 e 14 🚀, seguindo as diretrizes dos três pilares.
 </div>
 
+## :rocket: Abordagem dos três pilares
+- [X] Server Components 👉  Para não usar Javascript no lado do cliente.
+- [X] Client Components 👉  Enviando somente o javascript necessário para o navegador (cliente).
+- [X] Streaming SSR 👉  Ler/escrever dados de forma parcial + Server-Side Rendering
 ---
 
 ##  :rocket:  Componentes
@@ -31,15 +35,10 @@
 ## :rocket: Compatibilidade
 > A biblioteca @labex-hambre-ui/react é compatível com as seguintes versões de dependências:
 
-- [X] @labex-hambre-ui/tokens: Qualquer versão
-- [X] @radix-ui/react-alert-dialog: ^1.0.5
-- [X] @radix-ui/react-avatar: ^1.0.4
-- [X] @radix-ui/react-checkbox: ^1.0.4
-- [X] @radix-ui/react-radio-group: ^1.1.3
-- [X] @radix-ui/react-select: ^2.0.0
-- [X] @radix-ui/react-switch: ^1.0.3
-- [X] @stitches/react: ^1.2.8
-- [X] phosphor-react: ^1.4.1
+- [X] NextJS 12
+- [X] NextJS 13
+- [X] NextJS 14
+- [X] @radix-ui
 
 ##  📥 Instalações e configurações 
 > Para instalar o @labex-hambre-ui/react, utilize o seguinte comando npm:
@@ -51,7 +50,7 @@ npm i @labex-hambre-ui/react@latest
 "moduleResolution": "Node",
 ```
 
-🛠️ o arquivo `styles.js` que você criar, seja para uma página o componente, deve ter a configuração `use client` antes de tudo, pois os estilos devem ser renderizados no lado do cliente, como neste exemplo a seguir.
+🛠️ Todos os arquivos `styles.js` que você criar, seja para uma página ou componente, deve ter a configuração `use client` antes de tudo, pois os estilos devem ser renderizados no lado do cliente, como neste exemplo a seguir.
 ```bash
 'use client'
 import { Text, styled } from "@labex-hambre-ui/react";
