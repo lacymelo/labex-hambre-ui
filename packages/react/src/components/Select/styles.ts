@@ -46,7 +46,7 @@ export const Content = styled(Select.Content, {
     backgroundColor: '$white',
     borderRadius: '$sm',
     boxShadow: '0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)',
-    zIndex: 1,
+    zIndex: 3,
 })
 
 export const ScrollUpButton = styled(Select.ScrollDownButton, {

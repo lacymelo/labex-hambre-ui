@@ -1,5 +1,11 @@
 # @labex-hambre-ui/react
 
+## 2.10.0
+
+### Minor Changes
+
+- add zIndex select component
+
 ## 2.9.0
 
 ### Minor Changes
