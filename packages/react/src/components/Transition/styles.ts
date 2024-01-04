@@ -21,7 +21,7 @@ export const TransitionContainer = styled('div', {
         borderRadius: '$md',
         position: 'absolute',
         opacity: '.3',
-        backgroundColor: '$yellow100',
+        backgroundColor: '$hambre300',
         left: 0,
         bottom: 0,
         transition: 'all ease .35s'
@@ -34,7 +34,7 @@ export const TransitionContainer = styled('div', {
         position: 'absolute',
         borderRadius: '$md',
         opacity: '1',
-        backgroundColor: '$yellow100',
+        backgroundColor: '$hambre300',
         left: 0,
         bottom: 0,
         transition: 'all ease .35s'

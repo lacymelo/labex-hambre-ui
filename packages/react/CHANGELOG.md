@@ -1,5 +1,11 @@
 # @labex-hambre-ui/react
 
+## 3.0.0
+
+### Major Changes
+
+- new token color and adjust and component transition
+
 ## 2.10.0
 
 ### Minor Changes

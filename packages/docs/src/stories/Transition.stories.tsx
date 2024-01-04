@@ -26,7 +26,7 @@ export default {
                         flexDirection: 'row',
                         gap: '$2',
                         border: 'none',
-                        backgroundImage: 'linear-gradient(133deg, $orange300, $hambre300)'
+                        backgroundImage: 'linear-gradient(133deg, $colors$yellow100, $colors$orange100)',
                     }}
                 >
                     {Story()}

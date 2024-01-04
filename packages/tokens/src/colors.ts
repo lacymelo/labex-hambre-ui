@@ -2,6 +2,7 @@ export const colors = {
   white: '#FFF',
   black: '#000',
 
+  gray40: '#f7f7f7',
   gray50: '#e9e9e9',
   gray100: '#bababa',
   gray200: '#999999',
@@ -72,5 +73,4 @@ export const colors = {
   hambre300: '#FFCD42',
   hambre400: '#FFC014',
   hambre600: '#DBA100',
-  test: '#FFF'
 }

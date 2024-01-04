@@ -1,5 +1,11 @@
 # @labex-hambre-ui/tokens
 
+## 2.5.0
+
+### Minor Changes
+
+- new token color and adjust and component transition
+
 ## 2.4.0
 
 ### Minor Changes
