@@ -1,5 +1,11 @@
 # @labex-hambre-ui/react
 
+## 3.1.0
+
+### Minor Changes
+
+- add modify in the button component
+
 ## 3.0.0
 
 ### Major Changes

@@ -43,31 +43,31 @@ export const Button = styled('button', {
             secondary: {
                 backgroundColor: '$white',
                 color: '$gray500',
-                border: '1px solid $gray200',
+                border: '1px solid $hambre300',
 
                 '&:not(:disabled):hover': {
-                    backgroundColor: '$gray200',
+                    backgroundColor: '$hambre300',
                     color: '$white',
-                    border: '1px solid $gray200',
                     transition: 'all ease .36s'
                 },
 
                 '&:disabled': {
                     background: '$yellow50',
-                    border: '1px solid $yellow50',
+                    border: '1px solid $hambre300',
                 }
             },
             tertiary: {
-                color: '$gray600',
+                color: '$hambre300',
 
                 '&:not(:disabled):hover': {
-                    color: '$hambre300',
+                    color: '$hambre400',
                     transition: 'all ease .36s'
                 },
 
                 '&:disabled': {
-                    color: '$white',
-                    background: '$gray100',
+                    color: '$hambre400',
+                    background: '$white',
+                    border: '1px solid $hambre400'
                 }
             },
             icon: {
