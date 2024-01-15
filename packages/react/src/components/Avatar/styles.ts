@@ -44,7 +44,7 @@ export const AvatarFallback = styled(Avatar.Fallback, {
     justifyContent: 'center',
     width: '100%',
     height: '100%',
-    backgroundColor: "$gray300",
+    backgroundImage: `linear-gradient(195deg, $colors$orange50, $colors$yellow100)`,
     color: '$gray800',
 
     svg: {
