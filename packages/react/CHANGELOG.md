@@ -1,5 +1,11 @@
 # @labex-hambre-ui/react
 
+## 3.3.0
+
+### Minor Changes
+
+- new component upload
+
 ## 3.2.0
 
 ### Minor Changes
