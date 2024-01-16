@@ -1,4 +1,4 @@
-import { ChangeEvent, ComponentProps, ElementRef, forwardRef, useState } from "react"
+import { ChangeEvent, ComponentProps, ElementRef, forwardRef } from "react"
 import { Input, UploadInputContainer } from "./styles"
 import { Camera } from "phosphor-react"
 

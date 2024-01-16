@@ -1,5 +1,11 @@
 # @labex-hambre-ui/react
 
+## 3.4.0
+
+### Minor Changes
+
+- change import component upload input
+
 ## 3.3.0
 
 ### Minor Changes
