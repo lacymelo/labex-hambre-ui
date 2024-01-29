@@ -7,7 +7,6 @@ export default {
     component: UploadInput,
     tags: ['autodocs'],
     args: {
-        imageUrl: 'https://avatars.githubusercontent.com/u/89089202?s=400&u=d6817e5659321e49a5532ab9f267bf668647863a&v=4',
         onFileChange: (event: React.ChangeEvent<HTMLInputElement>) => {
             console.log('File changed:', event.target.files)
         }

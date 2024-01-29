@@ -26,7 +26,7 @@ export const TextArea = styled('textarea', {
     },
 
     '&:placeholder': {
-        color: '$gray400'
+        color: '$gray100'
     }
 })
 

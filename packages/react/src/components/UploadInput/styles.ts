@@ -13,25 +13,6 @@ export const UploadInputContainer = styled('div', {
     justifyContent: 'center',
     cursor: 'pointer',
 
-    variants: {
-        size: {
-            sm: {
-                width: '$20',
-                height: '$20',
-            },
-
-            md: {
-                width: '$40',
-                height: '$40',
-            },
-
-            lg: {
-                width: '$64',
-                height: '$64',
-            },
-        }
-    },
-
     img: {
         display: 'flex',
         width: '100%',
