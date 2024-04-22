@@ -69,6 +69,7 @@ export const colors = {
   orange800: '#7b4400',
   orange900: '#5e3400',
 
+  hambre100: '#FCE5A1',
   hambre200: '#FFD86B',
   hambre300: '#FFCD42',
   hambre400: '#FFC014',
