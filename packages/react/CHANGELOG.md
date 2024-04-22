@@ -1,5 +1,11 @@
 # @labex-hambre-ui/react
 
+## 4.0.0
+
+### Major Changes
+
+- add color test
+
 ## 3.5.0
 
 ### Minor Changes

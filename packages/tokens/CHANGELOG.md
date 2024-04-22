@@ -1,5 +1,11 @@
 # @labex-hambre-ui/tokens
 
+## 3.0.0
+
+### Major Changes
+
+- add color test
+
 ## 2.5.1
 
 ### Patch Changes
